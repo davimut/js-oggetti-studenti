@@ -4,12 +4,7 @@
 // Ciclare su tutti gli studenti e stampare, per ognuno di essi, nome e cognome.
 // prima ciclate con un ciclo for
 // poi commentate il ciclo for e usate il forEach
-// MILESTONE 2
-// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-// Aggiungere il nuovo studente all’array di studenti
-// Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà nome, cognome, eta
-// prima ciclate con un ciclo for
-// poi commentate il ciclo for e usate il forEach
+
 
 
 const studenti = [
@@ -55,11 +50,19 @@ const studenti = [
     studenti.forEach(function (studente){
         console.log (studente.nome, studente.cognome ) })
  
+
+
+// MILESTONE 2
+// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+// Aggiungere il nuovo studente all’array di studenti
+// Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà nome, cognome, eta
+// prima ciclate con un ciclo for
+// poi commentate il ciclo for e usate il forEach
+
+
 //   let nomeStud = prompt( 'inserisci nome')
 //   let cognomeStud = prompt( 'inserisci nome')
 //   let etaStud = prompt('inserisci la tua età')
-
-
     
  function aggiungiStudente(studente){
     
