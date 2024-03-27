@@ -76,34 +76,65 @@ const studenti = [
   
 // aggiungiStudente(studenti)
 
+
+
+
+
+
+
+// MILESTONE 1
+// Creare un array di oggetti di studenti.
+// Ogni oggetto studente deve avere tre proprietà:nome, cognome, eta .
+// Ciclare su tutti gli studenti e stampare, per ognuno di essi, nome, cognome, età tramite sfruttando i componenti bootstrap (ad es. in tabella).
+// MILESTONE 2
+// Dare la possibilità all’utente di aggiungere un nuovo oggetto studente inserendo nome, cognome ed età tramite form.
+// Aggiungere il nuovo studente all’array di studenti.
+// Aggiornare l’interfaccia con il nuovo studente.
+// BONUS
+// Mostrare solo gli studenti maggiorenni filtrando gli elementi dell’array prima di stampare la nuova lista in pagina
+
+
+
+
+
+
 console.log(studenti)
 
-const form = document.getElementById('aggiungiStudente')
+const form = document.getElementById('recuperaCredenziali')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
 	
-	let  nome = document.getElementById('Nome').value 
-	let  cognome = document.getElementById('Cognome').value 
-	let  eta = document.getElementById('Eta').value 
-       nuovoStudente = {
-        nome : nome ,
-        cognome : cognome ,
-        eta : eta ,
-    }
+	let  name = document.getElementById('Nome').value ;
+	let  surname = document.getElementById('Cognome').value ;
+	let  age = document.getElementById('Eta').value ;
    
-})
+     const nuovoStudente = {
+        nome: name ,
+        cognome: surname ,
+        eta: age ,
+     }
+      console.log(nuovoStudente)
+     studenti.push(nuovoStudente) 
 
-const tBodyElement = document.getElementById('table-body')
+    const tBodyElement = document.getElementById('table-body')
 
 	const trHTMLString = `
 	<tr>
-	  <td>${studente.name}</td>
-	  <td>${studente.cognome}</td>
-	  <td>${studente.eta}</td>
+	  <td>${nuovoStudente.nome}</td>
+	  <td>${nuovoStudente.cognome}</td>
+	  <td>${nuovoStudente.eta}</td>
 	</tr>
 	`
 	tBodyElement.innerHTML += trHTMLString	
 
 console.log(nuovoStudente)
+})
+   
+
+ 
+
+
+    
+
  
