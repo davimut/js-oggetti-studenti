@@ -64,16 +64,46 @@ const studenti = [
 //   let cognomeStud = prompt( 'inserisci nome')
 //   let etaStud = prompt('inserisci la tua età')
     
- function aggiungiStudente(studente){
+//  function aggiungiStudente(studente){
     
-       studenti.push = ({
-        nome : prompt( 'inserisci nome'),
-        cognome : prompt( 'inserisci nome'),
-        eta :  prompt('inserisci la tua età')}) 
+//        studenti.push = ({
+//         nome : prompt( 'inserisci nome'),
+//         cognome : prompt( 'inserisci nome'),
+//         eta :  prompt('inserisci la tua età')}) 
         
-    } 
+//     } 
 
   
-aggiungiStudente(studenti)
+// aggiungiStudente(studenti)
 
 console.log(studenti)
+
+const form = document.getElementById('aggiungiStudente')
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
+	
+	let  nome = document.getElementById('Nome').value 
+	let  cognome = document.getElementById('Cognome').value 
+	let  eta = document.getElementById('Eta').value 
+       nuovoStudente = {
+        nome : nome ,
+        cognome : cognome ,
+        eta : eta ,
+    }
+   
+})
+
+const tBodyElement = document.getElementById('table-body')
+
+	const trHTMLString = `
+	<tr>
+	  <td>${studente.name}</td>
+	  <td>${studente.cognome}</td>
+	  <td>${studente.eta}</td>
+	</tr>
+	`
+	tBodyElement.innerHTML += trHTMLString	
+
+console.log(nuovoStudente)
+ 
