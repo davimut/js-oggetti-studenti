@@ -132,7 +132,7 @@ console.log(nuovoStudente)
 })
    
 
- 
+ console.log (nuovoStudente.nome)
 
 
     
