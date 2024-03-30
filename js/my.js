@@ -82,6 +82,8 @@ const studenti = [
 
 
 
+
+
 // MILESTONE 1
 // Creare un array di oggetti di studenti.
 // Ogni oggetto studente deve avere tre proprietà:nome, cognome, eta .
@@ -95,30 +97,28 @@ const studenti = [
 
 
 
+function stampaStudenti(student) {
+	const tBodyElement = document.getElementById('table-body')
+
+	const trHTMLString = `
+	<tr>
+	  <td>${student.nome}</td>
+	  <td>${student.cognome}</td>
+	  <td>${student.eta}</td>
+	</tr>
+	`
+	tBodyElement.innerHTML += trHTMLString
+}
 
 
 
-console.log(studenti)
-
-const form = document.getElementById('recuperaCredenziali')
-
-form.addEventListener('submit', function (e) {
-    e.preventDefault()
-	
-	let  name = document.getElementById('Nome').value ;
-	let  surname = document.getElementById('Cognome').value ;
-	let  age = document.getElementById('Eta').value ;
-   
-     const nuovoStudente = {
-        nome: name ,
-        cognome: surname ,
-        eta: age ,
-     }
-      console.log(nuovoStudente)
-     studenti.push(nuovoStudente) 
-
+function stampaNuovoStudente(nome,cognome,eta) {
     const tBodyElement = document.getElementById('table-body')
-
+    const nuovoStudente = {
+        nome: nome,
+        cognome: cognome,
+        eta: eta
+    }
 	const trHTMLString = `
 	<tr>
 	  <td>${nuovoStudente.nome}</td>
@@ -127,12 +127,58 @@ form.addEventListener('submit', function (e) {
 	</tr>
 	`
 	tBodyElement.innerHTML += trHTMLString	
+}
 
-console.log(nuovoStudente)
-})
+
+
+for (let i = 0; i < studenti.length; i++) {
+	const studente = studenti[i]
+	stampaStudenti(studente)
+}
+
+function validaStudente(nome, cognome, eta) {
+
+    
+    if (nome === '') {
+        console.log('Il nome non è valido.');
+        return false;
+    }
+    if (cognome === '') {
+        console.log('Il cognome non è valido.');
+        return false;
+    }
+
+
+    if (eta === '') {
+            console.log('età non è valida');
+        return false;
+    }
+
+    return true;
+}
+
+
+const form = document.getElementById('recuperaCredenziali')
+
+form.addEventListener('submit' , registraNuovo  )
    
 
- console.log (nuovoStudente.nome)
+function registraNuovo (e) {
+   
+    e.preventDefault()
+	
+    let  nome = document.getElementById('Nome').value ;
+	let  cognome = document.getElementById('Cognome').value ;
+	let  eta = document.getElementById('Eta').value ;
+   
+   
+     if (validaStudente(nome, cognome, eta)) {
+       stampaNuovoStudente(nome, cognome, eta); 
+        form.reset();     
+}
+    }
+
+    
 
 
     

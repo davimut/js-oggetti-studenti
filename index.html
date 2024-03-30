@@ -27,7 +27,7 @@
               </tr>
             </thead>
             <tbody class="table-group-divider" id="table-body">
-              <tr>
+              <!-- <tr>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>26</td>
@@ -36,7 +36,7 @@
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>76</td>
-              </tr>
+              </tr> -->
             </tbody>
             </table>
            </div>
@@ -46,17 +46,17 @@
             <div class="row">
             <form id="recuperaCredenziali" class="col-6">
                 <div class="mb-3 ">
-                  <label for="name" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="Nome">
+                  <label for="name" class="form-label" >Nome</label>
+                  <input type="text" class="form-control is-invalid" id="Nome" required>
                   <div id="text" class="form-text">Inserisci caratteri validi</div>
                 </div>
                 <div class="mb-3">
                   <label for="surname" class="form-label">Cognome</label>
-                  <input type="text" class="form-control" id="Cognome">
+                  <input type="text" class="form-control  is-invalid" id="Cognome" required>
                 </div>
                 <div class="mb-3">
-                    <label for="age" class="form-label">Età</label>
-                    <input type="text" class="form-control" id="Eta">
+                    <label for="age" class="form-label ">Età</label>
+                    <input type="text" class="form-control is-invalid" id="Eta" required >
                   </div>
                 <button type="submit" class="btn btn-primary mt-2">Aggiungi</button>
               </form>
